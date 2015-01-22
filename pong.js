@@ -9,8 +9,9 @@ var game = new Game($('canvas')[0]);
 
 game.entities = [
   new Background(),
-  new Ball(),
-  new Paddle()
+  ball = new Ball(),
+  new Player(),
+  new Bot()
 ];
 
 game.start();
