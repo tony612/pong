@@ -12,6 +12,11 @@ Paddle.prototype.update = function() {
   Entity.prototype.update.apply(this, arguments);
 
   this.y = Math.min(Math.max(this.y, 0), game.height - this.height);
+
+  if (this.intersect(ball)) {
+    ball.xVelocity *= -1;
+    ball.yVelocity += this.yVelocity * 0.3;
+  }
 };
 
 function Player() {
