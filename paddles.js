@@ -3,6 +3,8 @@ function Paddle() {
 
   this.width = 20;
   this.height = 100;
+
+  this.score = 0;
 }
 
 Paddle.prototype = Object.create(Entity.prototype);
@@ -33,9 +35,9 @@ Player.prototype.update = function() {
   Paddle.prototype.update.apply(this, arguments);
 
   if (game.keyPressed.up) {
-    this.yVelocity = -12;
+    this.yVelocity = -11;
   } else if (game.keyPressed.down) {
-    this.yVelocity = 12;
+    this.yVelocity = 11;
   } else {
     this.yVelocity = 0;
   }

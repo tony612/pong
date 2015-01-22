@@ -22,10 +22,12 @@ Ball.prototype.update = function() {
   var hitter = false;
   if (this.x > game.width) {
     this.reset();
+    player.score += 1;
   }
 
   if (this.x < 0) {
     this.reset();
+    bot.score += 1;
   }
 };
 
