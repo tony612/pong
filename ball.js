@@ -35,6 +35,6 @@ Ball.prototype.reset = function() {
 
   var min = -8,
       max = 8;
-  this.xVelocity = Math.random() > 0.5 ? 8 : -8;
+  this.xVelocity = Math.random() > 0.5 ? 7 : -7;
   this.yVelocity = Math.floor(Math.random() * (max - min)) + min;
 };
